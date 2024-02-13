@@ -235,7 +235,7 @@ bindsym $mod+n exec nitrogen ~/Images/walpapers
 exec --no-startup-id setxkbmap -option ctrl:nocaps
 
 # swap alt > win to me able to use alt + key shorcuts in programs
-exec --no-startup-id setxkbmap -option altwin:swap_alt_win
+# exec --no-startup-id setxkbmap -option altwin:swap_alt_win
 
 # Keyboard delay
 exec --no-startup-id xset r rate 350 50
@@ -246,6 +246,10 @@ exec --no-startup-id nitrogen --restore
 # -b option is for run as a daemon
 exec --no-startup-id /usr/bin/picom --config ~/.config/picom/picom.conf -b
 
+#================= Montitors ================
+
+# %mod + shift + p to put monitor right
+bindsym $mod+Shift+p exec xrandr --output HDMI-A-0 --mode 1920x1080 --rate 60 --right-of DVI-D-0
 
 # ~~~~~~~~ Set Window styles ~~~~~~~~
 # change the value to add border on windows
